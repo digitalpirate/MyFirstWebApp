@@ -6,8 +6,23 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <div>
-        @RenderBody()
-    </div>
+
+    
+<header>
+    <h1>Welcome!</h1>
+    <nav>
+        <ul>
+            <li><a asp-controller="About" asp-action="About">About</a></li>
+            <li><a asp-controller="Contact" asp-action="Contact">Contact</a></li>
+            <li><a asp-controller="Projects" asp-action="Projects">Projects</a></li>
+            <li><a asp-controller="FeverCheck" asp-action="GetTemperature">Fever Temperature Check</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div id="container">
+    @RenderBody()
+</div>
+<footer><span>Christian Madsen &copy;@DateTime.Now.ToString("yyyy")</span></footer>
 </body>
 </html>

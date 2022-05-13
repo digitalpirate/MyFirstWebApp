@@ -16,7 +16,7 @@ namespace MyFirstWebApp
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -26,23 +26,19 @@ namespace MyFirstWebApp
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.UseStaticFiles();
-
             app.UseRouting();
-
             app.UseEndpoints(endpoints =>
             {
-
+                endpoints.MapControllerRoute(
+                    name: "gettemperature",
+                    pattern: "GetTemperature", 
+                    defaults: new { controller = "FeverCheck", action = "GetTemperature" }
+                    );
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}"
                 );
-
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
             });
         }
     }
