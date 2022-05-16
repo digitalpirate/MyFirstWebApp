@@ -10,7 +10,7 @@
         {
             if (temperature > 38)
             {
-                return "fever";
+                return "Fever";
             }
             else
             {

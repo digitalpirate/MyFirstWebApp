@@ -7,9 +7,10 @@
 @if(ViewBag.Message != null){
     <p>@ViewBag.Message</p>
 }
-
+<br />
 <form asp-controller="FeverCheck" asp-action="GetTemperature" method="post" >
     <label>Body Temperature:</label>
-    <input type="number" name="GetTemperature" value="37.5" step="0.1" />
+    <input type="number" name="temperature" value="37.5" step="0.1" />
     <input type="submit" value="Check!" />
 </form>
+<br />
