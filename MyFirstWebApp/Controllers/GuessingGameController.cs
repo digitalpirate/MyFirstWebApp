@@ -10,5 +10,10 @@ namespace MyFirstWebApp.Controllers
             ViewBag.Message = GuessingGameModel.GuessingGameMessage();
             return View();
         }
+        [HttpPost]
+        public IActionResult GuessNumber(int guess)
+        {
+            return View();
+        }
     }
 }

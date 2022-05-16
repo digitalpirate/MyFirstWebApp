@@ -4,3 +4,8 @@
 @if(ViewBag.Message != null){
     <p>@ViewBag.Message</p>
 }
+<form asp-controller="GuessingGame" asp-action="Guessnumber" method="post">
+    <label>Your guess:</label>
+    <input type="number" name="guess" />
+    <input type="submit" value="Guess!" />
+</form>

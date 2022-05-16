@@ -11,7 +11,7 @@ namespace MyFirstWebApp.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult GetTemperature(double temperature)
+        public IActionResult GetTemperature(int temperature)
         {
             FeverCheckModel bodyTemp = new FeverCheckModel();
             ViewBag.Message=bodyTemp.CheckTemperature(temperature);
