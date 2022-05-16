@@ -36,6 +36,11 @@ namespace MyFirstWebApp
                     defaults: new { controller = "FeverCheck", action = "GetTemperature" }
                     );
                 endpoints.MapControllerRoute(
+                    name: "guessinggame",
+                    pattern: "GuessNumber",
+                    defaults: new { controller = "GuessingGame", action = "GuessNumber" }
+                    );
+                endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}"
                 );
