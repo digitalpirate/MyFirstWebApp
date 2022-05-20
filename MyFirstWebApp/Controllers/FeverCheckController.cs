@@ -13,8 +13,7 @@ namespace MyFirstWebApp.Controllers
         [HttpPost]
         public IActionResult GetTemperature(int temperature)
         {
-            FeverCheckModel bodyTemp = new FeverCheckModel();
-            ViewBag.Message=bodyTemp.CheckTemperature(temperature);
+            ViewBag.Message=FeverCheckModel.CheckTemperature(temperature);
             return View();
         }
     }

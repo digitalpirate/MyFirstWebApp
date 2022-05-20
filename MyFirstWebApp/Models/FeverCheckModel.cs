@@ -6,7 +6,7 @@
         {
             return "Enter your temperature.";
         }
-        public string CheckTemperature(int temperature)
+        public static string CheckTemperature(int temperature)
         {
             if (temperature >= 38)
             {

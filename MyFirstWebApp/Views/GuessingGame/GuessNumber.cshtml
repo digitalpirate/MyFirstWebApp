@@ -6,6 +6,6 @@
 }
 <form asp-controller="GuessingGame" asp-action="Guessnumber" method="post">
     <label>Your guess:</label>
-    <input type="number" name="guess" />
+    <input type="number" name="guess" min="1" />
     <input type="submit" value="Guess!" />
 </form>
