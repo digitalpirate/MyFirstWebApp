@@ -22,7 +22,12 @@ namespace MyFirstWebApp.Controllers
             bool didIWin=GuessingGameModel.Game(guess, answer);
             
             if (didIWin == true)
+            {
                 ViewBag.Message = "You guessed right";
+                int secret = GuessingGameModel.SecretNumber();
+                HttpContext.Session.SetInt32("SecretNumber", secret);
+            }
+                
             else
                 ViewBag.Message = GuessingGameModel.HighOrLow(guess, answer);
 
